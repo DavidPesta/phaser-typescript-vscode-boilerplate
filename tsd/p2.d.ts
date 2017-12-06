@@ -444,16 +444,16 @@ declare module p2 {
 
     }
 
-    export interface BodyOptions {
+    export class BodyOptions {
 
-        mass?: number;
-        position?: number[];
-        velocity?: number[];
-        angle?: number;
-        angularVelocity?: number;
-        force?: number[];
-        angularForce?: number;
-        fixedRotation?: boolean;
+        mass: number;
+        position: number[];
+        velocity: number[];
+        angle: number;
+        angularVelocity: number;
+        force: number[];
+        angularForce: number;
+        fixedRotation: number;
 
     }
 
@@ -646,23 +646,6 @@ declare module p2 {
 
     }
 
-    export interface SharedShapeOptions {
-
-        position?: number[];
-        angle?: number;
-        collisionGroup?: number;
-        collisionResponse?: boolean;
-        collisionMask?: number;
-        sensor?: boolean;
-
-    }
-
-    export interface ShapeOptions extends SharedShapeOptions {
-
-        type?: number;
-
-    }
-
     export class Shape {
 
         static idCounter: number;
@@ -675,7 +658,7 @@ declare module p2 {
         static CAPSULE: number;
         static HEIGHTFIELD: number;
 
-        constructor(options?: ShapeOptions);
+        constructor(type: number);
 
         type: number;
         id: number;
