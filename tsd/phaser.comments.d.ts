@@ -14233,7 +14233,7 @@ declare module Phaser {
     * | c | d | ty |
     * | 0 | 0 | 1 |
     */
-    class Matrix extends PIXI.Matrix {
+    class Matrix {
 
 
         /**
@@ -22803,7 +22803,7 @@ declare module Phaser {
     * A RenderTexture is a special texture that allows any displayObject to be rendered to it. It allows you to take many complex objects and
     * render them down into a single quad (on WebGL) which can then be used to texture other display objects with. A way of generating textures at run-time.
     */
-    class RenderTexture extends PIXI.RenderTexture {
+    class RenderTexture extends PIXI.Texture {
 
 
         /**
